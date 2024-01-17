@@ -65,5 +65,5 @@ def infer_model(text):
 def predict(text):
     pred_category=infer_model(text)
 
-    return pred_category,None,0.7
+    return pred_category.strip(),None,0.7
 

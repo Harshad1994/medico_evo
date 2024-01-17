@@ -25,7 +25,7 @@ eval_tokenizer = AutoTokenizer.from_pretrained(base_model_id, add_bos_token=True
 
 
 
-ft_model = PeftModel.from_pretrained(base_model, "../mistral-disease-finetune/checkpoint-1500")
+ft_model = PeftModel.from_pretrained(base_model, "./model_adapters/checkpoint-1500")
 ft_model.eval()
 
 

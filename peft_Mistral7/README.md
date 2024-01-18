@@ -1,6 +1,6 @@
 ## Description of Solution
 
-mistralai/Mistral-7B-v0.1 model is finetuned to do classificatin task.
+mistralai/Mistral-7B-v0.1 [https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1] model is finetuned to do classificatin task.
 
 Steps in solution
 

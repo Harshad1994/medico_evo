@@ -26,6 +26,28 @@ curl -X 'POST' \
   "abstract": "This is my clinical abstract"
 }'
 ```
+
+Python Client
+
+```
+import requests
+
+url = 'http://localhost:8080/classify'
+headers = {
+    'accept': 'application/json',
+    'Content-Type': 'application/json'
+}
+
+data = {
+    'abstract': 'This is my clinical abstract'
+}
+
+response = requests.post(url, headers=headers, json=data)
+
+print(response.status_code)
+print(response.json())
+
+```
    
 
 

@@ -34,6 +34,8 @@ disease_categories = {
 
 3. Finetunning a Large Language Model for classification task
    In this case we finetuned a Mistral-7B-Instruct model for medical abstract classification task.
+
+ReadMe file inside each solution directory shades more light on solution and how to use
    
 
 

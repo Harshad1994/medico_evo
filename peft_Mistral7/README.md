@@ -16,10 +16,10 @@ Python >= 3.10  and system with GPU
 1. Create virtual environment
 2. Install requisite python libraries pip install -r requirements.txt
 3. Run main.py
-4. Hit the api endpoint with following curl command
+4. Hit the api endpoint with following curl command / Python Client
 ```
 curl -X 'POST' \
-  'http://localhost:8080/classify' \
+  'http://localhost:8080/generate' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -32,7 +32,7 @@ Python Client
 ```
 import requests
 
-url = 'http://localhost:8080/classify'
+url = 'http://localhost:8080/generate'
 headers = {
     'accept': 'application/json',
     'Content-Type': 'application/json'

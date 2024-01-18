@@ -1,7 +1,7 @@
 ## Description of Solution
 
 
-Finetunning a pre-trained Bio_ClinicalBERT model for multi class classification.  
+Finetunning a pre-trained Bio_ClinicalBERT [[emilyalsentzer/Bio_ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)] model for multi class classification.  
 The base model offers the advantage of domain specific knowledge already embedded in the model.
 
 ## How to RUN

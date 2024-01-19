@@ -21,7 +21,6 @@ docker run --gpus all -p 8081:8081 my-mistral-app
 Hit the api endpoint with following curl command / Python Client
 
 ```
-```
 curl -X 'POST' \
   'http://localhost:8081/generate' \
   -H 'accept: application/json' \

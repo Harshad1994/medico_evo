@@ -51,9 +51,11 @@ print(response.json())
 
 Response Json
 ```
-res_id: str
-category: str
-confidence: float
+{
+    'res_id':'id',
+    'category' : 'disease category',
+    'confidence':0.7
+}
 
 ```
    

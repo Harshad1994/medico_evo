@@ -24,7 +24,7 @@ disease_categories = {
 
 ### Solutions
 
-1. Leveraging text embeddings models to convert abstract text intovector and then training a classical ML model on the vectorized text.
+1. Leveraging text embeddings models to convert abstract text into vector and then training a classical ML model on the vectorized text.
    Used OpenAI's "text-embedding-ada-002" text embeddings model.
 
 2. Finetunning an Encoder only model for multi class classification.
@@ -35,18 +35,16 @@ disease_categories = {
 3. Finetunning a Large Language Model for classification task
    In this case we finetuned a Mistral-7B-Instruct model for medical abstract classification task.
 
+# Solution 1:
+    Solution approach and details can be seen in notebooks/model_with_embeddings.ipynb
+    The embeddings lack the clinical domain understaing and hence model does not do so well.
 
 # Soution 2
-
-
-
-## Description of Solution
-
 
 Finetunning a pre-trained Bio_ClinicalBERT [[emilyalsentzer/Bio_ClinicalBERT](https://huggingface.co/emilyalsentzer/Bio_ClinicalBERT)] model for multi class classification.  
 The base model offers the advantage of domain specific knowledge already embedded in the model.
 
-## How to RUN
+### How to RUN
 
 The app is containerazed.
 Simply build the provided Dockerfile and run
@@ -113,7 +111,7 @@ Steps in solution
 2. Finetunning the model with LoRA PEFT technique
 3. Merge LoRA adapters with original model and do inference
 
-## How to RUN
+### How to RUN
 
 The app is containerazed.
 Simply build the provided Dockerfile and run

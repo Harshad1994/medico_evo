@@ -6,13 +6,16 @@ The base model offers the advantage of domain specific knowledge already embedde
 
 ## How to RUN
 
-System Requirements
-Python >= 3.10
+The app is containerazed.
+Simply build the provided Dockerfile and run
 
-1. Create virtual environment
-2. Install requisite python libraries pip install -r requirements.txt
-3. Run main.py
-4. Hit the api endpoint with following curl command / Python Client
+```
+docker build -t my-bert-app .
+
+docker run -p 8080:8080 my-bert-app
+```
+Hit the api endpoint with following curl command / Python Client
+
 ```
 curl -X 'POST' \
   'http://localhost:8080/classify' \
@@ -42,6 +45,15 @@ response = requests.post(url, headers=headers, json=data)
 
 print(response.status_code)
 print(response.json())
+
+```
+
+
+Response Json
+```
+res_id: str
+category: str
+confidence: float
 
 ```
    

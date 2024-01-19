@@ -18,4 +18,4 @@ COPY app /app
 
 WORKDIR $APP_HOME
 
-CMD ["python",  "main_mistral.py"]
+CMD ["python3",  "main_mistral.py"]

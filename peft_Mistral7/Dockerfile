@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.2-base
+FROM nvidia/cuda:12.3.1-base-ubuntu20.04
 
 #set up environment
 RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y curl

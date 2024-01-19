@@ -13,13 +13,25 @@ Steps in solution
 System Requirements
 Python >= 3.10  and system with GPU
 
-1. Create virtual environment
-2. Install requisite python libraries pip install -r requirements.txt
-3. Run main.py
-4. Hit the api endpoint with following curl command / Python Client
+
+
+
+The app is containerazed.
+Simply build the provided Dockerfile and run
+
+```
+docker build -t my-mistral-app .
+
+docker run -it my-mistral-app bash
+
+docker run -p 8081:8081 my-mistral-app
+```
+Hit the api endpoint with following curl command / Python Client
+
+```
 ```
 curl -X 'POST' \
-  'http://localhost:8080/generate' \
+  'http://localhost:8081/generate' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -32,7 +44,7 @@ Python Client
 ```
 import requests
 
-url = 'http://localhost:8080/generate'
+url = 'http://localhost:8081/generate'
 headers = {
     'accept': 'application/json',
     'Content-Type': 'application/json'

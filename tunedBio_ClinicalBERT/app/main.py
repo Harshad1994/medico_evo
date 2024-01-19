@@ -11,6 +11,7 @@ class InputRequest(BaseModel):
 class ResponseModel(BaseModel):
     res_id: str
     category: str
+    category_index: int | None
     confidence: float
 
 app = FastAPI()
@@ -24,9 +25,9 @@ def classify(request_json: InputRequest) -> ResponseModel | dict:
 
     text = request_json.abstract
 
-    prediction,prob = predict(text)
+    prediction,cat_index,prob = predict(text)
 
-    response_dict = {"res_id":res_id,"category":prediction,"confidence":prob}
+    response_dict = {"res_id":res_id,"category":prediction,'category_index':cat_index,"confidence":prob}
 
     return ResponseModel(**response_dict)
 

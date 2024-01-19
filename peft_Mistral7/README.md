@@ -10,21 +10,13 @@ Steps in solution
 
 ## How to RUN
 
-System Requirements
-Python >= 3.10  and system with GPU
-
-
-
-
 The app is containerazed.
 Simply build the provided Dockerfile and run
 
 ```
 docker build -t my-mistral-app .
 
-docker run -it my-mistral-app bash
-
-docker run -p 8081:8081 my-mistral-app
+docker run --gpus all -p 8081:8081 my-mistral-app
 ```
 Hit the api endpoint with following curl command / Python Client
 
@@ -60,7 +52,17 @@ print(response.status_code)
 print(response.json())
 
 ```
-   
+
+Response Json
+```
+{
+    'res_id':'id',
+    'category' : 'disease category',
+    'category_index':1,
+    'confidence':0.7
+}
+
+```
 
 
 

@@ -54,6 +54,7 @@ Response Json
 {
     'res_id':'id',
     'category' : 'disease category',
+    'category_index':1,
     'confidence':0.7
 }
 

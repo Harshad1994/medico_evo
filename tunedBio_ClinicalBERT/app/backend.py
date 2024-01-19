@@ -43,5 +43,5 @@ def predict(text):
 
     prediction = disease_categories[index+1]
 
-    return prediction, confidence
+    return prediction, index+1,confidence
     

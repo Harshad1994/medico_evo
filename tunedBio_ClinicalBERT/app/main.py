@@ -2,9 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 import uuid
 from pydantic import BaseModel
-from backend import predict
 from classifier import Classifier
-
 
 class InputRequest(BaseModel):
     abstract: str

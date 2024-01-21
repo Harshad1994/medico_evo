@@ -18,6 +18,12 @@ class ResponseModel(BaseModel):
 app = FastAPI()
 classifier = Classifier()
 
+@app.get("/")
+def home():
+  return {"Welcom": "Bio_ClinicalBERT Service",
+          "message":"Hit /classify endpoint for inference or /docs for detailed documentation"}
+
+
 @app.post("/classify")
 def classify(request_json: InputRequest) -> ResponseModel | dict:
  

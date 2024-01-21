@@ -3,6 +3,7 @@ from fastapi import FastAPI
 import uuid
 from pydantic import BaseModel
 from backend import predict
+from classifier import Classifier
 
 
 class InputRequest(BaseModel):
@@ -15,6 +16,7 @@ class ResponseModel(BaseModel):
     confidence: float
 
 app = FastAPI()
+classifier = Classifier()
 
 @app.post("/classify")
 def classify(request_json: InputRequest) -> ResponseModel | dict:
@@ -25,7 +27,7 @@ def classify(request_json: InputRequest) -> ResponseModel | dict:
 
     text = request_json.abstract
 
-    prediction,cat_index,prob = predict(text)
+    prediction,cat_index,prob = classifier.predict(text)
 
     response_dict = {"res_id":res_id,"category":prediction,'category_index':cat_index,"confidence":prob}
 

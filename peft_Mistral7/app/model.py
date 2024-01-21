@@ -29,7 +29,7 @@ class Model:
     ft_model = PeftModel.from_pretrained(base_model, "./model_adapters/checkpoint-1500")
     ft_model.eval()
 
-    return ft_model.to(device)
+    return ft_model
 
 
   def load_tokenizer():

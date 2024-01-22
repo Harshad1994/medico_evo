@@ -54,7 +54,17 @@ docker build -t my-bert-app .
 
 docker run -p 8080:8080 my-bert-app
 ```
-Hit the api endpoint with following curl command / Python Client
+
+OR 
+
+create virtual environment with python >= 3.10 and install required packages and run main.py
+```
+python -m venv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+python main.py
+```
+Finally hit the api endpoint with following curl command / Python Client
 
 ```
 curl -X 'POST' \
@@ -121,7 +131,16 @@ docker build -t my-mistral-app .
 
 docker run --gpus all -p 8081:8081 my-mistral-app
 ```
-Hit the api endpoint with following curl command / Python Client
+OR 
+
+create virtual environment with python >= 3.10 and install required packages and run main_mistral.py
+```
+python -m venv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+python main_mistral.py
+```
+Finally hit the api endpoint with following curl command / Python Client
 
 ```
 curl -X 'POST' \
